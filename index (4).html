@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakhar Sharma | Website Designer & Developer</title>
+    <meta name="description" content="Portfolio of Prakhar Sharma - A creative Website Designer and Developer building fast, functional, and beautiful web experiences.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Curved Floating Header Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            
+            <!-- Brand Logo -->
+            <a href="#hero" class="logo">
+                <span class="logo-icon-badge"><i class="fa-solid fa-code"></i></span>
+                <span class="logo-text">PRAKHAR<span class="logo-dot">.DEV</span></span>
+            </a>
+
+            <!-- Navigation Links Wrapper (Desktop Centered Split, Mobile Drawer Dropdown) -->
+            <nav class="nav-menu" id="nav-menu">
+                <div class="nav-group nav-left">
+                    <a href="#hero" class="nav-link active"><i class="fa-solid fa-house nav-icon"></i> <span>Home</span></a>
+                    <a href="#about" class="nav-link"><i class="fa-solid fa-user nav-icon"></i> <span>About</span></a>
+                    <a href="#skills" class="nav-link"><i class="fa-solid fa-laptop-code nav-icon"></i> <span>Skills</span></a>
+                </div>
+
+                <div class="nav-group nav-right">
+                    <a href="#projects" class="nav-link"><i class="fa-solid fa-briefcase nav-icon"></i> <span>Projects</span></a>
+                    <a href="#experience" class="nav-link"><i class="fa-solid fa-graduation-cap nav-icon"></i> <span>Experience</span></a>
+                    <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane nav-icon"></i> <span>Contact</span></a>
+                </div>
+            </nav>
+
+            <!-- Action Buttons (Theme Toggle & Mobile Hamburger) -->
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <!-- Top Hello Pill -->
+            <div class="hero-top-badge">
+                <div class="speech-bubble">
+                    <span>Hello!</span>
+                    <svg class="doodle-spark spark-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                    </svg>
+                    <svg class="doodle-spark spark-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Main Heading with Custom Accent Underlines -->
+            <div class="hero-header">
+                <h1 class="hero-title">
+                    I'm <span class="name-highlight">Prakhar<svg class="underline-orange" viewBox="0 0 200 12" fill="none"><path d="M2 9C50 3 150 3 198 9" stroke="#EE5D36" stroke-width="5" stroke-linecap="round"/></svg></span>,
+                    <br>
+                    <span class="role-highlight">Website Designer & Developer<svg class="underline-green" viewBox="0 0 400 14" fill="none"><path d="M2 10C100 2 300 2 398 10" stroke="#2EA043" stroke-width="5" stroke-linecap="round"/></svg></span>
+                </h1>
+            </div>
+
+            <!-- Grid Layout: Left Content, Center Image Arch, Right Badges -->
+            <div class="hero-grid">
+                
+                <!-- Left Sub-Block -->
+                <div class="hero-left">
+                    <div class="motto-badge">
+                        <i class="fa-solid fa-code"></i> Code. Create. Repeat.
+                    </div>
+                    <p class="hero-description">
+                        I'm Prakhar Sharma, a developer building web experiences that are fast, functional, and a little bit fun.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            View Work <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                        <a href="resume.html" target="_blank" class="btn btn-outline btn-lg">
+                            <i class="fa-solid fa-file-arrow-down"></i> View / Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-status">
+                        <span class="status-dot pulse"></span>
+                        <span class="status-text">Available for freelance & full-time work</span>
+                    </div>
+                </div>
+
+                <!-- Center Photo Arch Container -->
+                <div class="hero-center">
+                    <div class="photo-arch-wrapper">
+                        <!-- Orange Arch Background -->
+                        <div class="orange-arch"></div>
+                        <!-- Hero Photo -->
+                        <div class="photo-container">
+                            <img src="prakhar-hero.png" alt="Prakhar Sharma - Website Designer & Developer" class="hero-photo">
+                        </div>
+                        
+                        <!-- Floating Tech Tags -->
+                        <div class="floating-badge badge-react">
+                            <i class="fa-brands fa-react"></i> React
+                        </div>
+                        <div class="floating-badge badge-figma">
+                            <i class="fa-brands fa-figma"></i> UI/UX
+                        </div>
+                        <div class="floating-badge badge-code">
+                            <i class="fa-solid fa-bolt"></i> Clean Code
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sub-Block: Ratings & Experience -->
+                <div class="hero-right">
+                    <div class="experience-card">
+                        <div class="stars-container">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="exp-number">1.5+ Years</div>
+                        <div class="exp-label">Experience</div>
+                    </div>
+
+                    <div class="mini-stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="stat-info">
+                            <h4>15+ Projects</h4>
+                            <p>Successfully Shipped</p>
+                        </div>
+                    </div>
+
+                    <div class="social-quick-links">
+                        <a href="https://github.com/prakharsharma123" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/prakhar-sharma-06april" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:prakharsharmawork1@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics Banner -->
+    <section class="metrics-banner">
+        <div class="container metrics-grid">
+            <div class="metric-item">
+                <span class="metric-num" data-target="15">15+</span>
+                <span class="metric-text">Completed Projects</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+                <span class="metric-num" data-target="1.5">1.5+</span>
+                <span class="metric-text">Years Building Web Apps</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+                <span class="metric-num">100%</span>
+                <span class="metric-text">Client Satisfaction</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+                <span class="metric-num">24h</span>
+                <span class="metric-text">Response Commitment</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-title-wrapper text-center">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Designing Solutions. Coding Experiences.</h2>
+                <p class="section-subtitle">Combining artistic UI design with robust, modern web development.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card story-card">
+                    <div class="card-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <h3>Who I Am</h3>
+                    <p>
+                        Hi, I'm <strong>Prakhar Sharma</strong>! I'm a passionate Website Designer & Developer currently pursuing my <strong>BCA (Bachelor of Computer Applications)</strong> from <strong>Maharishi University of Information and Technology (MUIT)</strong>. I completed my intermediate education under the <strong>ICSE / ISC Board</strong>.
+                    </p>
+                    <p>
+                        Over the past 1.5+ years, I've designed and built high-performing live web applications, full-stack Node.js/Express backends, and responsive frontends across multiple domains.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-chip"><i class="fa-solid fa-check"></i> BCA at MUIT University</div>
+                        <div class="highlight-chip"><i class="fa-solid fa-check"></i> ICSE Board Schooling</div>
+                        <div class="highlight-chip"><i class="fa-solid fa-check"></i> Full-Stack & REST APIs</div>
+                        <div class="highlight-chip"><i class="fa-solid fa-check"></i> Pixel Perfect UI/UX</div>
+                    </div>
+                </div>
+
+                <div class="about-card philosophy-card">
+                    <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Design & Dev Philosophy</h3>
+                    <div class="philosophy-list">
+                        <div class="philosophy-item">
+                            <span class="num-badge">01</span>
+                            <div>
+                                <h4>User-Centric Design</h4>
+                                <p>Every pixel serves a purpose. Interface design should feel intuitive, crisp, and enjoyable to navigate.</p>
+                            </div>
+                        </div>
+                        <div class="philosophy-item">
+                            <span class="num-badge">02</span>
+                            <div>
+                                <h4>Performance First</h4>
+                                <p>Fast load times, smooth transitions, and optimized code guarantee user engagement and retention.</p>
+                            </div>
+                        </div>
+                        <div class="philosophy-item">
+                            <span class="num-badge">03</span>
+                            <div>
+                                <h4>Continuous Learning</h4>
+                                <p>Technology constantly evolves. I stay on the cutting edge of front-end frameworks and design trends.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-cta" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <a href="resume.html" target="_blank" class="btn btn-primary w-100"><i class="fa-solid fa-file-pdf"></i> View & Download Resume (PDF)</a>
+                        <a href="#contact" class="btn btn-outline w-100"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-title-wrapper text-center">
+                <span class="section-tag">My Toolkit</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Here are the programming languages, databases, web frameworks, and analysis tools I work with daily.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Web & Full Stack Development Skills -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon dev-icon"><i class="fa-solid fa-code"></i></div>
+                        <div>
+                            <h3>Full-Stack & Web Engineering</h3>
+                            <p>Languages, frameworks & REST APIs</p>
+                        </div>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Python & Flask Backend</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>JavaScript (ES6+), Node.js & Express</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>HTML5 / CSS3 / Responsive UI</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>React.js / Angular.js</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Data Analytics -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon design-icon"><i class="fa-solid fa-database"></i></div>
+                        <div>
+                            <h3>Databases & Data Analytics</h3>
+                            <p>Data management, query design & visualization</p>
+                        </div>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>MongoDB (NoSQL Database)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>MySQL / SQL Database</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Data Analysis (Excel, Tableau, Jupyter)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span>Figma & UI Wireframing</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Pills -->
+            <div class="tech-stack-container">
+                <span class="stack-badge"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="stack-badge"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+                <span class="stack-badge"><i class="fa-solid fa-database"></i> MySQL</span>
+                <span class="stack-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="stack-badge"><i class="fa-brands fa-node-js"></i> Node.js & Express</span>
+                <span class="stack-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="stack-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="stack-badge"><i class="fa-brands fa-react"></i> React</span>
+                <span class="stack-badge"><i class="fa-brands fa-figma"></i> Figma</span>
+                <span class="stack-badge"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+                <span class="stack-badge"><i class="fa-solid fa-chart-pie"></i> Excel & Tableau</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Portfolio Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-title-wrapper text-center">
+                <span class="section-tag">Featured Works</span>
+                <h2 class="section-title">Recent Design & Development Projects</h2>
+                <p class="section-subtitle">Take a look at some of the web experiences I've designed and built recently.</p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="portfolio-filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack & Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend & UI</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                
+                <!-- Project Card 1: Mahadev Fitness Club -->
+                <div class="project-card" data-category="fullstack frontend">
+                    <div class="project-img-wrapper">
+                        <img src="mahadev-fitness.png" alt="Mahadev Fitness Club Website">
+                        <div class="project-overlay">
+                            <button class="btn btn-light btn-sm open-modal" data-project="1">Quick Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Live Website</span>
+                            <span class="tag">Gym Platform</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <h3 class="project-title">Mahadev Fitness Club</h3>
+                        <p class="project-desc">Modern fitness platform featuring workout plans, membership tiers, trainer profiles, equipment showcases, and high-energy UI aesthetics.</p>
+                        <div class="project-footer">
+                            <a href="https://www.mahadevfitnessclub.in/" target="_blank" class="project-link">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <div class="project-socials">
+                                <a href="https://www.mahadevfitnessclub.in/" target="_blank" title="Live Site"><i class="fa-solid fa-globe"></i></a>
+                                <a href="#" class="open-modal" data-project="1" title="Project Details"><i class="fa-solid fa-circle-info"></i></a>
+                                <a href="https://github.com/prakharsharma123/MahadevFitnessClub" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Mahadev Fitness Backend API -->
+                <div class="project-card" data-category="fullstack backend">
+                    <div class="project-img-wrapper">
+                        <img src="mahadev-backend.png" alt="Mahadev Fitness Club Backend API">
+                        <div class="project-overlay">
+                            <button class="btn btn-light btn-sm open-modal" data-project="2">Quick Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Render Hosted</span>
+                            <span class="tag">Python & Flask Backend</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                        <h3 class="project-title">Mahadev Fitness Backend System</h3>
+                        <p class="project-desc">Scalable REST API backend deployed on Render powering authentication, membership subscriptions, data endpoints, and backend business logic.</p>
+                        <div class="project-footer">
+                            <a href="https://mahadevfitnessclub-backend.onrender.com/" target="_blank" class="project-link">Live Backend <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <div class="project-socials">
+                                <a href="https://mahadevfitnessclub-backend.onrender.com/" target="_blank" title="Render API"><i class="fa-solid fa-server"></i></a>
+                                <a href="#" class="open-modal" data-project="2" title="Project Details"><i class="fa-solid fa-circle-info"></i></a>
+                                <a href="https://github.com/prakharsharma123/mahadevfitnessclub-backend-" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Roop Singh Tikki Chaat -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-img-wrapper">
+                        <img src="roop-singh-tikki.png" alt="Roop Singh Tikki Chaat Website">
+                        <div class="project-overlay">
+                            <button class="btn btn-light btn-sm open-modal" data-project="3">Quick Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Live Website</span>
+                            <span class="tag">Food / Menu</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                        <h3 class="project-title">Roop Singh Tikki Chaat</h3>
+                        <p class="project-desc">An appetizing digital restaurant showcase displaying street food menus, tikki chaat specials, online order inquiries, and catering info.</p>
+                        <div class="project-footer">
+                            <a href="https://www.roopsinghtikkichaat.in/" target="_blank" class="project-link">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <div class="project-socials">
+                                <a href="https://www.roopsinghtikkichaat.in/" target="_blank" title="Live Site"><i class="fa-solid fa-utensils"></i></a>
+                                <a href="#" class="open-modal" data-project="3" title="Project Details"><i class="fa-solid fa-circle-info"></i></a>
+                                <a href="https://github.com/prakharsharma123/roopsinghtikkichaat" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Nar Singh Tour & Travels -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-img-wrapper">
+                        <img src="nar-singh-travels.png" alt="Nar Singh Tour & Travels Platform">
+                        <div class="project-overlay">
+                            <button class="btn btn-light btn-sm open-modal" data-project="4">Quick Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Vercel Deployed</span>
+                            <span class="tag">Travel & Tourism</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <h3 class="project-title">Nar Singh Tour & Travels</h3>
+                        <p class="project-desc">Comprehensive travel agency booking web app hosted on Vercel. Features North India tour packages, outstation taxi booking, and quick contact forms.</p>
+                        <div class="project-footer">
+                            <a href="https://nar-singh-tour-trevels.vercel.app/" target="_blank" class="project-link">Visit Web App <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <div class="project-socials">
+                                <a href="https://nar-singh-tour-trevels.vercel.app/" target="_blank" title="Vercel App"><i class="fa-solid fa-route"></i></a>
+                                <a href="#" class="open-modal" data-project="4" title="Project Details"><i class="fa-solid fa-circle-info"></i></a>
+                                <a href="https://github.com/prakharsharma123/NarSinghTour-Trevels" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <div class="section-title-wrapper text-center">
+                <span class="section-tag">Academic & Career</span>
+                <h2 class="section-title">Education & Real-World Projects</h2>
+                <p class="section-subtitle">My academic qualifications and hands-on web application development achievements.</p>
+            </div>
+
+            <div class="timeline-wrapper">
+                
+                <!-- Item 1 (Top): Currently doing Internship at Sunsystechsol -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Currently Active</span>
+                            <span class="badge-role">Current Internship</span>
+                        </div>
+                        <h3>Full Stack | Front-End | Back-End Developer Intern</h3>
+                        <p class="company-name"><i class="fa-solid fa-briefcase"></i> Sunsystechsol Internship</p>
+                        <p class="timeline-desc">
+                            Currently working as a Full Stack, Front-End, and Back-End Developer Intern at Sunsystechsol. Building scalable web architectures, REST APIs, dynamic user interfaces, and full-stack solutions.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Sunsystechsol</span>
+                            <span>Full Stack</span>
+                            <span>Front-End</span>
+                            <span>Back-End</span>
+                            <span>Internship</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 (Middle): BCA Currently Doing (2024 - 2027) -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2024 - 2027</span>
+                            <span class="badge-role">Higher Education</span>
+                        </div>
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <p class="company-name"><i class="fa-solid fa-building-columns"></i> Maharishi University of Information and Technology (MUIT)</p>
+                        <p class="timeline-desc">
+                            Currently pursuing BCA degree (2024 - 2027). Specializing in computer applications, full-stack web software development, algorithms, database management, and web engineering.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>BCA (2024-2027)</span>
+                            <span>MUIT University</span>
+                            <span>Computer Applications</span>
+                            <span>Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 (Bottom): Intermediate 12th Pass in 2023 ICSE -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Passed in 2023</span>
+                            <span class="badge-role">School Education</span>
+                        </div>
+                        <h3>Intermediate (Class XII)</h3>
+                        <p class="company-name"><i class="fa-solid fa-graduation-cap"></i> ICSE Board</p>
+                        <p class="timeline-desc">
+                            Completed Intermediate schooling (Class XII) in 2023 under ICSE Board (Indian Certificate of Secondary Education) with strong foundation in Science, Mathematics, and Computer Applications.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>ICSE Board</span>
+                            <span>Passed in 2023</span>
+                            <span>Class XII</span>
+                            <span>Mathematics & Science</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Praise Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-title-wrapper text-center">
+                <span class="section-tag">Client Feedback</span>
+                <h2 class="section-title">What People Say About My Work</h2>
+                <p class="section-subtitle">Feedback from clients and project collaborators.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">
+                        "We wanted our gym's website to feel as high-energy as the gym itself. Prakhar nailed the dark and orange look, and now members can check plans and trainers online before they even walk in."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">VY</div>
+                        <div>
+                            <h4>Vikas Yadav</h4>
+                            <p>Owner, Mahadev Fitness Club</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">
+                        "Our chaat corner ran on word of mouth for years. Prakhar gave us a proper website with our full menu and photos, and it's genuinely brought in customers who found us online first."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">RS</div>
+                        <div>
+                            <h4>Roop Singh</h4>
+                            <p>Owner, Roop Singh Tikki Chaat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">
+                        "We needed travelers to see our tour packages and book a cab without calling us every time. Prakhar built a clean, fast site that handles exactly that, and it works perfectly on mobile too."
+                    </p>
+                    <div class="client-info">
+                        <div class="client-avatar">NS</div>
+                        <div>
+                            <h4>Nar Singh</h4>
+                            <p>Founder, Nar Singh Tour & Travels</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-card-container">
+                <div class="contact-info-col">
+                    <span class="section-tag light-tag">Get In Touch</span>
+                    <h2>Let's build something amazing together!</h2>
+                    <p>Have a project in mind, looking for a website designer, or just want to connect? Drop me a message and I'll get back to you within 24 hours.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="detail-label">Email Me</span>
+                                <div class="email-copy-wrapper">
+                                    <span class="detail-val" id="email-text">prakharsharmawork1@gmail.com</span>
+                                    <button class="copy-btn" id="copy-email-btn" title="Copy Email"><i class="fa-regular fa-copy"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <span class="detail-label">Phone / WhatsApp</span>
+                                <span class="detail-val">+91 8318276922</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <span class="detail-label">Location</span>
+                                <span class="detail-val">Lucknow, Uttar Pradesh, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <span>Follow Me:</span>
+                        <div class="social-icons">
+                            <a href="https://github.com/prakharsharma123" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com/in/prakhar-sharma-06april" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="mailto:prakharsharmawork1@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-col">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkodvodw" method="POST">
+                        <h3>Send a Message 🚀</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Project Type / Subject</label>
+                            <select id="subject" name="subject" class="form-select">
+                                <option value="Website Design">Website Design</option>
+                                <option value="Front-end Development">Front-end Development</option>
+                                <option value="Full Website Build">Full Website Build (Design + Dev)</option>
+                                <option value="Job / Freelance Inquiry">Job / Freelance Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project, timeline, and goals..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <a href="#hero" class="logo">
+                        <span class="logo-icon-badge"><i class="fa-solid fa-code"></i></span>
+                        <span class="logo-text">PRAKHAR<span class="logo-dot">.DEV</span></span>
+                    </a>
+                    <p class="footer-tagline">
+                        Full-Stack & Frontend Web Developer crafting fast, responsive, and pixel-perfect web applications.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/prakharsharma123" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/prakhar-sharma-06april" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:prakharsharmawork1@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/prakh.ar16/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Me</a></li>
+                        <li><a href="#skills"><i class="fa-solid fa-chevron-right"></i> Skills & Toolkit</a></li>
+                        <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i> Featured Projects</a></li>
+                        <li><a href="resume.html" target="_blank"><i class="fa-solid fa-file-pdf"></i> View / Print Resume</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-info">
+                        <p><i class="fa-solid fa-envelope"></i> prakharsharmawork1@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> +91 8318276922</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Lucknow, UP, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-copy">
+                    <p>&copy; 2026 Prakhar Sharma. Built with <i class="fa-solid fa-heart" style="color: var(--primary-orange);"></i> & Clean Code.</p>
+                </div>
+
+                <div class="footer-back-top">
+                    <a href="#hero" class="back-top-btn" aria-label="Back to Top" title="Back to Top">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-backdrop" id="project-modal">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamically filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span class="toast-msg" id="toast-msg">Message sent successfully!</span>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

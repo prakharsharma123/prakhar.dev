@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakhar Sharma - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1E293B;
+            --accent: #EE5D36;
+            --text: #334155;
+            --light-bg: #F8FAFC;
+            --border: #E2E8F0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #F1F5F9;
+            line-height: 1.5;
+            padding: 20px;
+        }
+        .resume-page {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .action-bar {
+            max-width: 850px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-print {
+            background: #EE5D36;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(238, 93, 54, 0.3);
+        }
+        .btn-print:hover { background: #D84B24; }
+        .btn-back {
+            background: #334155;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+        .header h2 {
+            font-size: 1.1rem;
+            color: #64748B;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.88rem;
+            color: #475569;
+        }
+        .contact-info a { color: #EE5D36; text-decoration: none; font-weight: 500; }
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 4px;
+            margin: 22px 0 12px 0;
+        }
+        .summary p { font-size: 0.92rem; text-align: justify; }
+        .skills-list { list-style: none; }
+        .skills-list li {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+        .skills-list strong { color: var(--primary); width: 220px; display: inline-block; }
+        .project-item { margin-bottom: 16px; }
+        .project-title {
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: var(--primary);
+        }
+        .project-title a { color: #EE5D36; text-decoration: none; }
+        .bullets {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 4px;
+        }
+        .bullets li {
+            font-size: 0.88rem;
+            margin-bottom: 4px;
+            color: #334155;
+        }
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        .edu-degree { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+        .edu-school { font-size: 0.9rem; color: #64748B; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .action-bar { display: none; }
+            .resume-page { box-shadow: none; padding: 0; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="action-bar">
+        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+        <button onclick="window.print()" class="btn-print"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+    </div>
+
+    <div class="resume-page">
+        <!-- Header -->
+        <div class="header">
+            <h1>PRAKHAR SHARMA</h1>
+            <h2>Full-Stack Developer (MERN) | Data Analyst</h2>
+            <div class="contact-info">
+                <span><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh</span>
+                <span><i class="fa-solid fa-phone"></i> +91 8318276922</span>
+                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:prakharsharmawork1@gmail.com">prakharsharmawork1@gmail.com</a></span>
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/prakhar-sharma-06april" target="_blank">linkedin.com/in/prakhar-sharma-06april</a></span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/prakharsharma123" target="_blank">github.com/prakharsharma123</a></span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">
+            <p>
+                Enthusiastic BCA student and self-driven full-stack developer skilled in the MERN stack, Python/Flask, and database engineering (MongoDB & MySQL), with hands-on experience independently designing, building, and deploying production-grade web applications solving real-life problems (fitness club management, food ordering, and travel booking). Currently interning at Sunsystechsol as a Full Stack / Front-End / Back-End developer. Experienced in data analysis using Excel, SQL, Tableau, and Jupyter Notebook. Seeking an entry-level full-stack developer role or software engineering opportunity to build impactful, real-world software solutions.
+            </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section-title">Technical Skills</div>
+        <ul class="skills-list">
+            <li><strong>Languages & Frameworks:</strong> Python, JavaScript, HTML5, CSS3, Flask, Node.js, Express.js, Angular.js, React</li>
+            <li><strong>Databases:</strong> MongoDB, MySQL / SQL</li>
+            <li><strong>Developer Tools:</strong> VS Code, Git, GitHub, Vercel, Render</li>
+            <li><strong>Data Analysis:</strong> Excel, SQL, Tableau, Jupyter Notebook</li>
+            <li><strong>AI-Assisted Development:</strong> Claude, Cursor, ChatGPT, Lovable, Figma</li>
+        </ul>
+
+        <!-- Projects -->
+        <div class="section-title">Projects</div>
+
+        <div class="project-item">
+            <div class="project-title">Mahadev Fitness Club — Full-Stack Gym Website (<a href="https://www.mahadevfitnessclub.in/" target="_blank">mahadevfitnessclub.in</a>)</div>
+            <ul class="bullets">
+                <li>Independently designed and built a full-stack gym website with a separate admin portal, deployed live on Render.</li>
+                <li>Developed responsive frontend (HTML, CSS, JS) covering programs, trainer profiles, membership plans, and booking forms.</li>
+                <li>Built a Python (Flask) & Node.js backend to manage gym content, member subscriptions, and secure REST API data operations.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Roop Singh Tikki Chaat Corner — Food Ordering Web App (<a href="https://www.roopsinghtikkichaat.in/" target="_blank">roopsinghtikkichaat.in</a>)</div>
+            <ul class="bullets">
+                <li>Independently built a food ordering platform featuring menu browsing, cart management, and interactive checkout flow.</li>
+                <li>Implemented order management workflows, street food specialty menus, and QR-based payment integration UI.</li>
+                <li>Added location auto-detection and address management UI to calculate delivery distances and fees.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Nar Singh Tour & Travels — Car Rental Booking Platform (<a href="https://nar-singh-tour-trevels.vercel.app/" target="_blank">nar-singh-tour-trevels.vercel.app</a>)</div>
+            <ul class="bullets">
+                <li>Independently developed a car rental booking website deployed on Vercel.</li>
+                <li>Built city-to-city ride search, vehicle category filters, and instant booking confirmation UI workflows.</li>
+                <li>Designed a responsive landing page with fleet showcases, FAQs, and customer testimonials.</li>
+            </ul>
+        </div>
+
+        <!-- Experience & Internship -->
+        <div class="section-title">Experience & Internship</div>
+        <div class="project-item">
+            <div class="project-title">Sunsystechsol — Full Stack | Front-End | Back-End Developer Intern</div>
+            <ul class="bullets">
+                <li>Working on building full-stack web applications, REST APIs, database schemas, and responsive UI components.</li>
+            </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="section-title">Education</div>
+        <div class="education-item">
+            <div>
+                <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+                <div class="edu-school">Maharishi University of Information Technology (MUIT), Lucknow, Uttar Pradesh</div>
+            </div>
+            <div style="font-size: 0.9rem; font-weight: 600; color: #EE5D36;">2024 – 2027 (3rd Year)</div>
+        </div>
+
+        <div class="education-item" style="margin-top: 10px;">
+            <div>
+                <div class="edu-degree">Intermediate (Class XII)</div>
+                <div class="edu-school">ICSE / ISC Board</div>
+            </div>
+            <div style="font-size: 0.9rem; font-weight: 600; color: #64748B;">Passed in 2023</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
