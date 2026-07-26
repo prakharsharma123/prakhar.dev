@@ -795,13 +795,118 @@
     </div>
 
     
-    <div id="visit-counter" class="visit-counter">
+    <!-- <div id="visit-counter" class="visit-counter">
     <div class="visit-icon"><i class="fa-solid fa-chart-simple"></i></div>
     <div class="visit-text">
         <span class="visit-label">Total Visits <span class="live-dot"></span></span>
         <span class="visit-number" id="visit-count-num">0</span>
     </div>
+</div> -->
+
+<style>
+    .visit-counter-wrap {
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 1rem 2rem;
+        background: var(--bg-main, #0F0F12);
+    }
+    .visit-counter {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 0.7rem 1.25rem;
+        background: var(--bg-card, #18181C);
+        border: 1px solid var(--border-color, #2A2A30);
+        border-radius: var(--radius-md, 16px);
+        box-shadow: 0 10px 25px -5px rgba(238, 93, 54, 0.15);
+        opacity: 0;
+        transform: translateY(10px);
+        animation: visitFadeIn 0.6s ease forwards 0.3s;
+    }
+    .visit-icon {
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(238, 93, 54, 0.12);
+        color: var(--primary-orange, #EE5D36);
+        font-size: 1.05rem;
+    }
+    .visit-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25;
+    }
+    .visit-label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted, #A1A1AA);
+    }
+    .visit-number {
+        font-family: var(--font-heading, 'Outfit', sans-serif);
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-main, #F4F4F5);
+    }
+    .live-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #2EA043;
+        animation: livePulse 2s infinite;
+    }
+    @keyframes visitFadeIn {
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes livePulse {
+        0% { box-shadow: 0 0 0 0 rgba(46, 160, 67, 0.5); }
+        70% { box-shadow: 0 0 0 6px rgba(46, 160, 67, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(46, 160, 67, 0); }
+    }
+</style>
+
+<div class="visit-counter-wrap">
+    <div id="visit-counter" class="visit-counter">
+        <div class="visit-icon"><i class="fa-solid fa-chart-simple"></i></div>
+        <div class="visit-text">
+            <span class="visit-label">Total Visits <span class="live-dot"></span></span>
+            <span class="visit-number" id="visit-count-num">0</span>
+        </div>
+    </div>
 </div>
+
+<script>
+(function () {
+    const counterKey = 'prakharsharma123-portfolio-visits-x7q2f';
+    const numEl = document.getElementById('visit-count-num');
+    if (!numEl) return;
+
+    function animateCount(target) {
+        const duration = 1200;
+        const start = performance.now();
+        function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            numEl.textContent = Math.floor(eased * target);
+            if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+
+    fetch(`https://countapi.mileshilliard.com/api/v1/hit/${counterKey}`)
+        .then(res => res.json())
+        .then(data => animateCount(parseInt(data.value, 10)))
+        .catch(() => { numEl.textContent = '—'; });
+})();
+</script>
     
     <script src="main.js"></script>
 </body>
