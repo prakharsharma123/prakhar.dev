@@ -1945,7 +1945,7 @@ img {
     }
 
 
-   .visit-counter {
+   /* .visit-counter {
     position: fixed;
     bottom: 24px;
     right: 24px;
@@ -2038,7 +2038,7 @@ img {
         font-size: 0.95rem;
     }
     .visit-number { font-size: 1rem; }
-}
+} */
    
     /* Footer Responsive Layouts */
     .footer-top {
