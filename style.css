@@ -1943,6 +1943,50 @@ img {
         width: 100px;
         height: 1px;
     }
+
+   #visit-counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--bg-card, #1E293B);
+    color: var(--text-main, #fff);
+    border: 1px solid var(--primary-orange, #EE5D36);
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 15px rgba(238,93,54,0.15);
+    opacity: 0;
+    animation: visitFadeIn 0.6s ease forwards 0.4s;
+}
+
+#visit-counter i {
+    color: var(--primary-orange, #EE5D36);
+}
+
+#visit-count-num {
+    color: var(--primary-orange, #EE5D36);
+    font-weight: 800;
+}
+
+@keyframes visitFadeIn {
+    to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    #visit-counter {
+        bottom: 12px;
+        right: 12px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+}
+   
     /* Footer Responsive Layouts */
     .footer-top {
         grid-template-columns: 1fr;
