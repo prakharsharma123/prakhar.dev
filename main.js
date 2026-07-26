@@ -288,4 +288,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3500);
     }
 
+   // Live visit counter — increments once per page load using a free, no-signup counting API
+(function () {
+    const counterKey = 'prakharsharma123-portfolio-visits-x7q2f'; // keep this unique, don't rename it later
+    const countEl = document.getElementById('visit-count-num');
+
+    fetch(`https://countapi.mileshilliard.com/api/v1/hit/${counterKey}`)
+        .then(res => res.json())
+        .then(data => {
+            if (countEl) countEl.textContent = data.value;
+        })
+        .catch(() => {
+            if (countEl) countEl.textContent = '—';
+        });
+})();
+   
 });
