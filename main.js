@@ -24,29 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-//    // Live visit counter with a count-up animation
-// (function () {
-//     const counterKey = 'prakharsharma123-portfolio-visits-x7q2f';
-//     const numEl = document.getElementById('visit-count-num');
-//     if (!numEl) return;
-
-//     function animateCount(target) {
-//         const duration = 1200;
-//         const start = performance.now();
-//         function tick(now) {
-//             const progress = Math.min((now - start) / duration, 1);
-//             const eased = 1 - Math.pow(1 - progress, 3);
-//             numEl.textContent = Math.floor(eased * target);
-//             if (progress < 1) requestAnimationFrame(tick);
-//         }
-//         requestAnimationFrame(tick);
-//     }
-
-//     fetch(`https://countapi.mileshilliard.com/api/v1/hit/${counterKey}`)
-//         .then(res => res.json())
-//         .then(data => animateCount(parseInt(data.value, 10)))
-//         .catch(() => { numEl.textContent = '—'; });
-// })();
 
     // Close menu when clicking a link
     navLinks.forEach(link => {
