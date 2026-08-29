@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     // Close menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -166,6 +165,22 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'Comprehensive travel agency and booking platform deployed on Vercel. Enables users to explore North India tour packages, request outstation cab bookings, view vehicle fleets, and submit booking inquiries.',
             tech: ['JavaScript', 'HTML5/CSS3', 'Vercel Cloud Deployment', 'Responsive Grid', 'UX Wireframes'],
             liveUrl: 'https://nar-singh-tour-trevels.vercel.app/'
+        },
+        '5': {
+            title: 'PrakharChatBox',
+            category: 'AI Portfolio Assistant',
+            img: 'project-chatbox.jpg',
+            desc: 'A live conversational AI assistant that answers visitor questions about my background, skills, and projects in real time using the Google Gemini API.',
+            tech: ['Python', 'Flask', 'Google Gemini API', 'SQLite', 'Authentication'],
+            liveUrl: 'https://prakhar-chatbox.onrender.com/'
+        },
+        '6': {
+            title: 'Gym Management System',
+            category: 'Database-Driven Admin Platform',
+            img: 'project-2.png',
+            desc: 'A login-protected admin platform for gym member records with full CRUD (add, update, remove, search), custom authentication, and a live database.',
+            tech: ['Node.js', 'Express.js', 'CRUD', 'Authentication', 'Render'],
+            liveUrl: 'https://gym-management-system-7zgt.onrender.com/'
         }
     };
 
@@ -213,10 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. Contact Form Submission & Validation (Formspree) ---
+    // --- 5. Contact Form Submission & Validation ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
@@ -224,35 +239,19 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending...`;
 
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: new FormData(contactForm),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    submitBtn.innerHTML = `<i class="fa-solid fa-check"></i> Sent Successfully!`;
-                    submitBtn.style.backgroundColor = 'var(--accent-green)';
-                    showToast('Thank you! Your message has been sent to Prakhar.');
-                    contactForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (err) {
-                console.error('Contact form error:', err);
-                submitBtn.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Failed to Send`;
-                submitBtn.style.backgroundColor = '#DC2626';
-                showToast('Something went wrong. Please email me directly instead.');
-            } finally {
+            setTimeout(() => {
                 submitBtn.disabled = false;
+                submitBtn.innerHTML = `<i class="fa-solid fa-check"></i> Sent Successfully!`;
+                submitBtn.style.backgroundColor = 'var(--accent-green)';
+
+                showToast('Thank you! Your message has been sent to Prakhar.');
+                contactForm.reset();
+
                 setTimeout(() => {
                     submitBtn.innerHTML = originalBtnText;
                     submitBtn.style.backgroundColor = 'var(--primary-orange)';
                 }, 3000);
-            }
+            }, 1200);
         });
     }
 
@@ -289,19 +288,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3500);
     }
 
-   // Live visit counter — increments once per page load using a free, no-signup counting API
-(function () {
-    const counterKey = 'prakharsharma123-portfolio-visits-x7q2f'; // keep this unique, don't rename it later
-    const countEl = document.getElementById('visit-count-num');
-
-    fetch(`https://countapi.mileshilliard.com/api/v1/hit/${counterKey}`)
-        .then(res => res.json())
-        .then(data => {
-            if (countEl) countEl.textContent = data.value;
-        })
-        .catch(() => {
-            if (countEl) countEl.textContent = '—';
-        });
-})();
-   
 });
