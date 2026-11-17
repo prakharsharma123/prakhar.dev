@@ -9,7 +9,7 @@
  *
  * Optional settings, as attributes on that script tag:
  *   data-label="Chatbox"                              (button text; default "Talk to Chatbox")
- *   data-src="https://prakhar-chatbox.onrender.com/"  (where the chatbot lives)
+ *   data-src="https://prakhar-chatbox-2ygx.onrender.com/"  (where the chatbot lives)
  *
  * Everything it needs (styles, button, panel) is created here, so no other files change.
  */
@@ -19,7 +19,7 @@
   window.__prakharChatboxWidget = true;
 
   var me = document.currentScript;
-  var SRC = (me && me.getAttribute("data-src")) || "https://prakhar-chatbox.onrender.com/";
+  var SRC = (me && me.getAttribute("data-src")) || "https://prakhar-chatbox-2ygx.onrender.com/";
   var LABEL = (me && me.getAttribute("data-label")) || "Talk to Chatbox";
 
   var targetOrigin = "*";
