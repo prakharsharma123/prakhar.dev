@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'project-chatbox.jpg',
             desc: 'A live conversational AI assistant that answers visitor questions about my background, skills, and projects in real time using the Google Gemini API.',
             tech: ['Python', 'Flask', 'Google Gemini API', 'SQLite', 'Authentication'],
-            liveUrl: 'https://prakhar-chatbox.onrender.com/'
+            liveUrl: 'https://prakhar-chatbot.onrender.com/'
         },
         '6': {
             title: 'Gym Management System',
