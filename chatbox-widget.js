@@ -19,7 +19,7 @@
   window.__prakharChatboxWidget = true;
 
   var me = document.currentScript;
-  var SRC = (me && me.getAttribute("data-src")) || "https://prakhar-chatbox-2ygx.onrender.com/";
+  var SRC = (me && me.getAttribute("data-src")) || "https://prakhar-chatbot.onrender.com/";
   var LABEL = (me && me.getAttribute("data-label")) || "Talk to Chatbox";
 
   var targetOrigin = "*";
