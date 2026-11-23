@@ -116,6 +116,7 @@
             color: var(--primary);
         }
         .project-title a { color: #EE5D36; text-decoration: none; }
+        .project-title a:hover { text-decoration: underline; }
         .bullets {
             list-style: disc;
             padding-left: 20px;
@@ -167,15 +168,16 @@
         <div class="section-title">Professional Summary</div>
         <div class="summary">
             <p>
-                Enthusiastic BCA student and self-driven full-stack developer skilled in the MERN stack, Python/Flask, and database engineering (MongoDB & MySQL), with hands-on experience independently designing, building, and deploying production-grade web applications solving real-life problems (fitness club management, food ordering, and travel booking). Currently interning at Sunsystechsol as a Full Stack / Front-End / Back-End developer. Experienced in data analysis using Excel, SQL, Tableau, and Jupyter Notebook. Seeking an entry-level full-stack developer role or software engineering opportunity to build impactful, real-world software solutions.
+                Enthusiastic BCA student and self-driven full-stack developer skilled in JavaScript (Node.js, Express, React), Python/Flask, and modern cloud databases (Neon PostgreSQL, MongoDB, MySQL). Hands-on experience independently designing, engineering, and deploying production-grade web and mobile applications solving real-world challenges — including QR-based attendance & payment gym platforms, smart multi-role restaurant ordering systems with Telegram notifications, AI chatbots, and travel portals. Successfully completed a Full Stack Developer Internship at Sunsystechsol. Experienced in data analytics using Excel, SQL, Tableau, and Jupyter Notebook. Seeking software engineering opportunities to build impactful, scalable digital solutions.
             </p>
         </div>
 
         <!-- Technical Skills -->
         <div class="section-title">Technical Skills</div>
         <ul class="skills-list">
-            <li><strong>Languages & Frameworks:</strong> Python, JavaScript, HTML5, CSS3, Flask, Node.js, Express.js, Angular.js, React</li>
-            <li><strong>Databases:</strong> MongoDB, MySQL / SQL</li>
+            <li><strong>Languages & Frameworks:</strong> JavaScript (ES6+), Python, Node.js, Express.js, EJS, Flask, React, HTML5, CSS3</li>
+            <li><strong>Databases & Cloud:</strong> Neon DB (Cloud PostgreSQL), MongoDB, MySQL / SQL, SQLite</li>
+            <li><strong>APIs & Architectures:</strong> Google Gemini API, Google OAuth 2.0, Telegram Bot API, RESTful APIs, QR Code Systems</li>
             <li><strong>Developer Tools:</strong> VS Code, Git, GitHub, Vercel, Render</li>
             <li><strong>Data Analysis:</strong> Excel, SQL, Tableau, Jupyter Notebook</li>
             <li><strong>AI-Assisted Development:</strong> Claude, Cursor, ChatGPT, Lovable, Figma</li>
@@ -184,46 +186,67 @@
         <!-- Projects -->
         <div class="section-title">Projects</div>
 
+        <!-- 1. Prakhar Talking Chatbot -->
         <div class="project-item">
-            <div class="project-title">PrakharBot — Live AI-Powered Portfolio Assistant (<a href="https://prakhar-chatbox.onrender.com/" target="_blank">prakhar-chatbox.onrender.com</a>)</div>
+            <div class="project-title">1. Prakhar Talking Chatbot — AI Portfolio Assistant (<a href="https://prakhar-chatbot.onrender.com/" target="_blank">Live Site</a> | <a href="https://github.com/prakharsharma123/prakhar-bot" target="_blank">GitHub</a>)</div>
             <ul class="bullets">
-                <li>Designed and deployed a live conversational AI assistant that answers visitor questions about my background, skills, and projects in real time using the Google Gemini API.</li>
-                <li>Built a full authentication system (sign-up/login with hashed passwords) with session-based free-message gating, plus an admin dashboard to track visitor engagement and activity.</li>
-                <li>Engineered the backend end-to-end with Flask and SQLite, handling API integration, session management, and secure data storage.</li>
+                <li>Designed and deployed an interactive conversational AI portfolio assistant powered by the Google Gemini API, answering visitor queries regarding background, technical stack, and software projects in real time.</li>
+                <li>Engineered the backend with Python and Flask, implementing session-based free-message gating, secure user authentication with password hashing, and an admin dashboard to monitor live visitor engagement.</li>
+                <li><strong>Technologies & Tech Stack:</strong> Python, Flask, Google Gemini API, SQLite, HTML5/CSS3, JavaScript, Render Cloud Deployment.</li>
             </ul>
         </div>
 
+        <!-- 2. Rechoice Food: QR Ordering, Bookings & Back Office -->
         <div class="project-item">
-            <div class="project-title">Gym Management System — Database-Driven Admin Platform (<a href="https://gym-management-system-7zgt.onrender.com/" target="_blank">gym-management-system-7zgt.onrender.com</a>)</div>
+            <div class="project-title">2. Rechoice Food: QR Ordering, Bookings and Back Office (<a href="https://rechoicewebsite.onrender.com/" target="_blank">Live Site</a> | <a href="https://github.com/prakharsharma123/rechoicewebsite" target="_blank">GitHub</a>)</div>
             <ul class="bullets">
-                <li>Built a login-protected admin platform for gym member records with full CRUD (add, update, remove, search), custom authentication, and a live database — deployed on Render.</li>
+                <li>Architected an end-to-end full-stack smart food ecosystem featuring unique QR-code table ordering, eliminating physical menus and streamlining dine-in customer checkout.</li>
+                <li>Engineered multi-role dashboards for all restaurant operations: Client-side Guest mobile ordering portal, Staff floor management, Kitchen Display System (KDS) for real-time prep tracking, and an Owner business analytics dashboard.</li>
+                <li>Integrated real-time Telegram bot notifications sending automated order confirmation, cooking alerts, and table booking notifications directly to staff and management channels.</li>
+                <li>Implemented Google authentication (OAuth 2.0), online table reservations, and cross-platform responsive mobile app + website support.</li>
+                <li><strong>Technologies & Tech Stack:</strong> Node.js, Express.js, Cloud Database, Google OAuth 2.0, Telegram Bot API, WebSockets / Real-time Alerts, JavaScript (ES6+), Progressive Mobile App & Responsive UI.</li>
             </ul>
         </div>
 
+        <!-- 3. Mahadev Fitness Club -->
         <div class="project-item">
-            <div class="project-title">Mahadev Fitness Club — Full-Stack Gym Website (<a href="https://www.mahadevfitnessclub.in/" target="_blank">mahadevfitnessclub.in</a>)</div>
+            <div class="project-title">3. Mahadev Fitness Club — Full-Stack Gym Platform (<a href="https://www.mahadevfitnessclub.in/" target="_blank">Live Website</a> | <a href="https://github.com/prakharsharma123/mahadevfitnessclubfullstack" target="_blank">GitHub</a>)</div>
             <ul class="bullets">
-                <li>Independently designed and built a full-stack gym website with a separate admin portal, deployed live on Render.</li>
-                <li>Developed responsive frontend (HTML, CSS, JS) covering programs, trainer profiles, membership plans, and booking forms.</li>
-                <li>Built a Python (Flask) & Node.js backend to manage gym content, member subscriptions, and secure REST API data operations.</li>
+                <li>Developed a production-grade full-stack gym ecosystem featuring a contactless QR-based attendance tracking and digital payment collection system.</li>
+                <li>Implemented Google authentication and a 3-tier portal: public client page for visitors, dedicated member login & dashboard (workout plans, payment status, attendance history), and role-based admin dashboard for member records and revenue tracking.</li>
+                <li>Integrated Neon Cloud Database (PostgreSQL) for scalable, high-concurrency cloud data storage, paired with an automated reminder system for membership renewal and fee dues.</li>
+                <li>Engineered a downloadable mobile app and fully responsive website ensuring fluid performance across mobile and desktop devices.</li>
+                <li><strong>Technologies & Tech Stack:</strong> Node.js, Express.js, Neon Database (Cloud PostgreSQL), Google Authentication, Python / Flask Backend API, JavaScript (ES6+), HTML5/CSS3, Render.</li>
             </ul>
         </div>
 
+        <!-- 4. Gym Management System -->
         <div class="project-item">
-            <div class="project-title">Roop Singh Tikki Chaat Corner — Food Ordering Web App (<a href="https://www.roopsinghtikkichaat.in/" target="_blank">roopsinghtikkichaat.in</a>)</div>
+            <div class="project-title">4. Gym Management System — Database-Driven Admin Platform (<a href="https://gym-management-system-7zgt.onrender.com/" target="_blank">Live Web App</a> | <a href="https://github.com/prakharsharma123/gym-management-system" target="_blank">GitHub</a>)</div>
             <ul class="bullets">
-                <li>Independently built a food ordering platform featuring menu browsing, cart management, and interactive checkout flow.</li>
-                <li>Implemented order management workflows, street food specialty menus, and QR-based payment integration UI.</li>
-                <li>Added location auto-detection and address management UI to calculate delivery distances and fees.</li>
+                <li>Built a login-protected administrative web platform for gym member management featuring complete CRUD operations (add, update, remove, search, and filter records).</li>
+                <li>Engineered custom authentication and role authorization backed by a live persistent database, deployed on Render with secure environment configurations.</li>
+                <li><strong>Technologies & Tech Stack:</strong> Node.js, Express.js, Cloud Database, Custom Authentication, REST API, HTML5, CSS3, Render.</li>
             </ul>
         </div>
 
+        <!-- 5. Roop Singh Tikki Chaat Corner -->
         <div class="project-item">
-            <div class="project-title">Nar Singh Tour & Travels — Car Rental Booking Platform (<a href="https://nar-singh-tour-trevels.vercel.app/" target="_blank">nar-singh-tour-trevels.vercel.app</a>)</div>
+            <div class="project-title">5. Roop Singh Tikki Chaat Corner — Food Ordering Showcase (<a href="https://www.roopsinghtikkichaat.in/" target="_blank">Live Website</a> | <a href="https://github.com/prakharsharma123/roopsinghtikkichaat" target="_blank">GitHub</a>)</div>
             <ul class="bullets">
-                <li>Independently developed a car rental booking website deployed on Vercel.</li>
-                <li>Built city-to-city ride search, vehicle category filters, and instant booking confirmation UI workflows.</li>
-                <li>Designed a responsive landing page with fleet showcases, FAQs, and customer testimonials.</li>
+                <li>Developed an appetizing food ordering and digital showcase web application with interactive categorized street food menus, item filtering, and shopping cart flow.</li>
+                <li>Implemented order management workflows, event catering inquiry forms, location auto-detection, and QR-based digital payment integration UI.</li>
+                <li><strong>Technologies & Tech Stack:</strong> HTML5, Vanilla CSS3, JavaScript (ES6+), Food Ordering Flow, Responsive UI/UX.</li>
+            </ul>
+        </div>
+
+        <!-- 6. Nar Singh Tour & Travels -->
+        <div class="project-item">
+            <div class="project-title">6. Nar Singh Tour & Travels — Car Rental & Tour Booking Platform (<a href="https://nar-singh-tour-trevels.vercel.app/" target="_blank">Live Web App</a> | <a href="https://github.com/prakharsharma123/NarSinghTour-Trevels" target="_blank">GitHub</a>)</div>
+            <ul class="bullets">
+                <li>Built a comprehensive travel agency booking web application deployed on Vercel showcasing North India tour packages, outstation taxi booking, and fleet options.</li>
+                <li>Implemented city-to-city trip search, vehicle category filters (Sedan, SUV, Tempo Traveler), customer testimonials, and direct WhatsApp / quick contact inquiry routing.</li>
+                <li><strong>Technologies & Tech Stack:</strong> JavaScript, HTML5, CSS3, Vercel Cloud Deployment, Responsive Layout & Wireframing.</li>
             </ul>
         </div>
 
