@@ -136,11 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectData = {
         '1': {
             title: 'Mahadev Fitness Club',
-            category: 'Full-Stack / Gym Web Application',
+            category: 'Full-Stack Ecosystem / Gym Platform',
             img: 'mahadev-fitness.png',
-            desc: 'A modern, high-energy gym and fitness platform created for Mahadev Fitness Club. Features comprehensive workout plans, membership subscriptions, trainer directory, gym equipment showcase, interactive schedules, and sleek dark/orange UI aesthetics.',
-            tech: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Responsive UI', 'SEO & Web Performance'],
-            liveUrl: 'https://www.mahadevfitnessclub.in/'
+            desc: 'Full stack fitness management ecosystem featuring QR-based attendance and payment system, Google authentication, Neon cloud database, automated reminder system, downloadable app + responsive website, public client page, dedicated member login & page, and comprehensive admin dashboard.',
+            tech: ['QR Attendance & Payments', 'Google Auth', 'Neon DB (Cloud)', 'Downloadable App', 'Automated Reminders', 'Member & Admin Dashboards'],
+            liveUrl: 'https://www.mahadevfitnessclub.in/',
+            githubUrl: 'https://github.com/prakharsharma123/mahadevfitnessclubfullstack'
         },
         '2': {
             title: 'Mahadev Fitness Club Backend API',
@@ -181,6 +182,24 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'A login-protected admin platform for gym member records with full CRUD (add, update, remove, search), custom authentication, and a live database.',
             tech: ['Node.js', 'Express.js', 'CRUD', 'Authentication', 'Render'],
             liveUrl: 'https://gym-management-system-7zgt.onrender.com/'
+        },
+        '7': {
+            title: 'The Furniture Company',
+            category: 'Full-Stack E-Commerce & Interior Showcase',
+            img: 'the-furniture-company.png',
+            desc: 'Modern e-commerce and furniture showcase platform built with Node.js framework and EJS templating. Engineered with handwritten custom JavaScript for rich user interactions, dynamic catalog filtering, responsive layout across all mobile devices, and seamless checkout flow.',
+            tech: ['Node.js Framework', 'EJS Templates', 'Handwritten JavaScript', 'Mobile Responsive', 'Vercel Hosting'],
+            liveUrl: 'https://thefurniturecompany.vercel.app/home',
+            githubUrl: 'https://github.com/prakharsharma123/thefurniturecompany'
+        },
+        '8': {
+            title: 'Rechoice Food: QR ordering, bookings and back office',
+            category: 'Full-Stack Food-Tech & POS Platform',
+            img: 'rechoice-food.png',
+            desc: 'End-to-end smart food ecosystem featuring unique QR-based table ordering, multi-role dashboards for (Client side) Guest + (Staff, Kitchen, Owner), cross-platform mobile app + responsive website support, Google authentication, real-time Telegram notifications, and instant online bookings.',
+            tech: ['Unique QR-Based Ordering', 'Multi-Role Dashboards (Staff/Kitchen/Owner)', 'Mobile App + Website', 'Google Authentication', 'Telegram Notifications', 'Online Booking'],
+            liveUrl: '#projects',
+            githubUrl: 'https://github.com/prakharsharma123'
         }
     };
 
@@ -207,7 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
 
                     <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-                        <a href="${data.liveUrl}" target="_blank" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Project / Link</a>
+                        ${data.liveUrl && data.liveUrl !== '#projects' ? `<a href="${data.liveUrl}" target="_blank" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Project / Link</a>` : ''}
+                        ${data.githubUrl ? `<a href="${data.githubUrl}" target="_blank" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> View GitHub Repo</a>` : ''}
                         <button class="btn btn-outline btn-sm" onclick="document.getElementById('project-modal').classList.remove('active')">Close Window</button>
                     </div>
                 `;
